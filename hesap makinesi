@@ -1,0 +1,40 @@
+def add(a, b):
+    print(a + b)
+
+def sub(a, b):
+    print(a - b)
+
+def mul(a, b):
+    print(a * b)
+
+def div(a, b):
+    if b == 0:  
+        print("Cannot divide by zero!")
+    else:
+        print(a / b)
+
+while True: 
+    a = int(input("zahl1="))
+    b = int(input("zahl2="))
+    operator = input("Operation (+, -, *, /): ")
+
+    if operator == "+":
+        add(a, b)
+    elif operator == "-":
+        sub(a, b)
+    elif operator == "*":
+        mul(a, b)
+    elif operator == "/":
+        div(a, b)
+    else:
+        print("fehler")
+
+    f = input("neue aufgabe (Y/N): ")
+    if f == "Y":
+        continue  
+    elif f == "N":
+        break  
+    else:
+        print("Ungültige Eingabe! Beenden...")
+        break  
+print("ende")
